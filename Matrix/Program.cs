@@ -52,8 +52,29 @@ namespace Matrix
 
             float a00, a01, a10, a11;
             float b00, b01, b10, b11;
+            float c00, c01, c10, c11;
+            float radius;
 
 
+
+            // Uppgift 1
+            a00 = 1;
+            a01 = 2;
+            a10 = 3;
+            a11 = 4;
+
+            b00 = 3;
+            b01 = 4;
+            b10 = 5;
+            b11 = 6;
+
+            c00 = a00 + b00;
+            c01 = a01 + b01;
+            c10 = a10 + b10;
+            c11 = a11 + b11;
+
+            MatrixChecker.CheckAddition(a00, a01, a10, a11, b00, b01, b10, b11, c00, c01, c10, c11);
+            Draw2x2Matrix(c00, c01, c10, c11);
 
             Console.ReadKey();
         }
