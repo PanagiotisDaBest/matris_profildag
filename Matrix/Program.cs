@@ -76,6 +76,15 @@ namespace Matrix
             MatrixChecker.CheckAddition(a00, a01, a10, a11, b00, b01, b10, b11, c00, c01, c10, c11);
             Draw2x2Matrix(c00, c01, c10, c11);
 
+            radius = 3.14f;
+            a00 = (float)Math.Cos(radius);
+            a01 = (float)Math.Sin(radius);
+            a10 = (float)Math.Sin(radius);
+            a11 = (float)Math.Cos(radius);
+
+            MatrixChecker.CheckRotationMatrix(radius, a00, a01, a10, a11);
+            Draw2x2Matrix( a00, a01, a10, a11);
+
             Console.ReadKey();
         }
     }
